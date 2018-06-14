@@ -1,3 +1,4 @@
+# Default MySQL version, override with environment variable
 ARG MYSQL_VERSION=latest
 
 FROM mysql:${MYSQL_VERSION}
