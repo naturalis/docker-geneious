@@ -12,9 +12,7 @@ services:
       - ./mysql/conf.d:/etc/mysql/conf.d
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      #MYSQL_DATABASE: ${MYSQL_DATABASE}
-      #MYSQL_USER: ${MYSQL_USER}
-      #MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_VERSION: ${MYSQL_VERSION}
     networks:
       - default
 
