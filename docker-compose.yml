@@ -11,8 +11,8 @@ services:
     volumes:
       - ./mysql/conf.d:/etc/mysql/conf.d
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_VERSION: ${MYSQL_VERSION}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     networks:
       - default
 
