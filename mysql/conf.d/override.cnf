@@ -6,3 +6,8 @@ slow_query_log = 2
 log_queries_not_using_indexes = on
 log_slow_admin_statements = on
 min_examined_row_limit = 1
+
+#[client]
+#user = root
+#password = mypass
+#database = mysql
