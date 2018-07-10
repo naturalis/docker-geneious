@@ -1,4 +1,5 @@
 [mysqld]
+init_connect = 'SET collation_connection = utf8_unicode_ci'
 character_set_server = utf8
 collation_server = utf8_unicode_ci
 max_allowed_packet = 16M
