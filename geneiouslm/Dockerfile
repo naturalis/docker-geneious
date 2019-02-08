@@ -8,4 +8,4 @@ RUN apt-get -y update && \
 
 ADD /answers .
 
-RUN bash -c "./GeneiousFloatingLicenseManager_linux64_2_1_2_with_jre.sh"
+RUN bash -c "./GeneiousFloatingLicenseManager_linux64_2_1_2_with_jre.sh < answers"
