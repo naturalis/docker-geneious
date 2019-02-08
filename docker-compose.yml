@@ -15,6 +15,11 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     networks:
       - default
+  geneiouslm:
+    build:
+      context: ./geneiouslm
+      args:
+        UBUNTU_VERSION: ${UBUNTU_VERSION}
 
 networks:
   default:
