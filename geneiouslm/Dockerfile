@@ -9,3 +9,11 @@ RUN apt-get -y update && \
 ADD /answers .
 
 RUN bash -c "./GeneiousFloatingLicenseManager_linux64_2_1_2_with_jre.sh < answers"
+
+EXPOSE 27001
+
+#USER lmadmin
+
+#ADD utils.sh /utils.sh
+#ADD entrypoint.sh /entrypoint.sh
+#ENTRYPOINT ["/entrypoint.sh"]
