@@ -7,7 +7,7 @@ services:
       args:
         MYSQL_VERSION: ${MYSQL_VERSION}
     ports:
-      - 3306:3306
+      - "3306:3306"
     volumes:
       - ./mysql/conf.d:/etc/mysql/conf.d
     environment:
@@ -17,8 +17,8 @@ services:
       - default
   geneiouslm:
     ports:
-      - 27001:27001
-      - 49630:49630
+      - "27001:27001"
+      - "49630:49630"
     tty: true
     build:
       context: ./geneiouslm
