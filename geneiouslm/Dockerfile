@@ -10,7 +10,7 @@ ADD /answers .
 
 RUN bash -c "./GeneiousFloatingLicenseManager_linux64_2_1_2_with_jre.sh < answers"
 
-EXPOSE 27001
+EXPOSE 27001 49630
 
 #USER lmadmin
 
