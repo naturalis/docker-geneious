@@ -16,6 +16,9 @@ services:
     networks:
       - default
   geneiouslm:
+    ports:
+      - 27001:27001
+      - 49630:49630
     tty: true
     build:
       context: ./geneiouslm
