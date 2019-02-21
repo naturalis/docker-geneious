@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:${UBUNTU_VERSION}
 MAINTAINER rudi.broekhuizen@naturalis.nl
 
 RUN apt-get -y update && \
