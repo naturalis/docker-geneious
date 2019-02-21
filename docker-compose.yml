@@ -15,6 +15,31 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     networks:
       - default
+  geneiouslm:
+    build:
+      context: ./geneiouslm
+      args:
+        UBUNTU_VERSION: ${UBUNTU_VERSION}
+  postgres:
+    shm_size: 256M
+    build: ./postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./postgres/conf.d:/conf.d
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - REPLICATION_USER=${REPLICATION_USER}
+      - REPLICATION_PASSWORD=${REPLICATION_PASSWORD}
+    networks:
+      - default
 
 networks:
   default:
+
+volumes:
+  pglog:
+  pgdata:
