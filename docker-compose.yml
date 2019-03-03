@@ -13,6 +13,11 @@ services:
     environment:
       MYSQL_VERSION: ${MYSQL_VERSION}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: '10m'
+        max-file: '5'
     networks:
       - default
   geneiouslm:
@@ -42,6 +47,11 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - REPLICATION_USER=${REPLICATION_USER}
       - REPLICATION_PASSWORD=${REPLICATION_PASSWORD}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: '10m'
+        max-file: '5'
     networks:
       - default
 
